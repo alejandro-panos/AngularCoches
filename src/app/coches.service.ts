@@ -8,14 +8,14 @@ export class CochesService {
   constructor(private http: Http) { }
 
   getMarcas() {
-    return this.http.get('http://symfonyrest.local/api').map((res: Response) => res.json())
+    return this.http.get('http://symfonyrest.local/app_dev.php/api').map((res: Response) => res.json())
   }
 
   createMarca(marca: string) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     let body = JSON.stringify(marca);
-    return this.http.post('http://symfonyrest.local/api?marca=' + marca, body, headers).map((res: Response) => res.json());
+    return this.http.post('http://symfonyrest.local/app_dev.php/api?marca=' + marca, body, headers).map((res: Response) => res.json());
   }
 
   updateMarca(marca: string, id: string) {

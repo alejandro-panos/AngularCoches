@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CochesService } from './coches.Service';
+import { CochesService } from './coches.service';
 import 'rxjs/Rx';
 //import { Observable } from 'rxjs/Rx';
 
